@@ -3,6 +3,39 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Farmulario</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<form action='@Url.Action("GuardarDatos", "Home")' method='POST' enctype="multipart/form-data"> 
+    Nombre: <input type = "text" name = "nombre" placeholder="Ingresar Nombre"/><br>
+    Edad: <input type = "number" name = "Edad" placeholder="Ingresar Edad"/><br>
+    DNI: <input type = "number" name = "DNI" placeholder="Ingresar DNI"/><br>
+    ¿Actualmente trabaja? 
+    <input type = "radio" name = "Trabajando" value="si">Si
+    <input type = "radio" name = "Trabajando" value="no">No <br>
+    Tipo de empleo:
+    <select name="tipo">
+        <option value="1">Relación de dependencia</option>
+        <option value="2">Monotributista</option>
+        <option value="3">Autónomo</option>
+        <option value="4">Desempleado</option>
+    </select> <br>
+    Ingreso mensual: <input type = "number" name = "Ingreso"/> <br>
+    ¿Posee deudas?
+    <input type = "radio" name = "ConDeudas" value="si">Si
+    <input type = "radio" name = "ConDeudas" value="no">No <br>
+    Tipo de deudas:
+    <input type="checkbox" name="Deduda">Tarjeta de crédito
+    <input type="checkbox" name="Deduda">Préstamo bancario
+    <input type="checkbox" name="Deduda">Préstamo Informal <br>
+    Monto solicitado: <input type = "number" name = "Monto" placeholder="Ingresar Monto"/> <br>
+    Plazo de devolución:
+    <select name="tipo">
+        <option value="1"></option>
+        <option value="2">6 meses</option>
+        <option value="3">12 meses</option>
+        <option value="4">24 meses</option>
+    </select> <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="resetear">
+</form>
