@@ -12,9 +12,22 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
+    
+    [HttpPost]
+    public ActionResult GuardarDatos(string nombre, int edad, int dni, bool trabajando, int tipo, int ingreso, bool conDeudas, int tipoDeuda, int monto, int plazo, bool condiciones)
+    {
+        ViewBag.Usuario = nombre;
+        int MaxMonto = ingreso * 5;
+        if(edad > 18 && trabajando && ingreso >= 250000 && monto < MaxMonto && tipoDeuda == 1 && condiciones)
+        {
+            return View("Apto");
+        }
+        return View("NoApto");
+    }
 
     public IActionResult Index()
     {
+
         return View();
     }
 

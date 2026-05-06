@@ -20,8 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[Z:/2026/Programación/Formularios/Views/Home/Apto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/2026/Programación/Formularios/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2026/Programación/Formularios/Views/Home/NoApto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0FwdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2026/Programación/Formularios/Views/Home/Privacy.cshtml]
