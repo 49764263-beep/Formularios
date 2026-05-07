@@ -14,11 +14,15 @@ public class HomeController : Controller
     }
     
     [HttpPost]
-    public ActionResult GuardarDatos(string nombre, int edad, int dni, bool trabajando, int tipo, int ingreso, bool conDeudas, int tipoDeuda, int monto, int plazo, bool condiciones)
+    public ActionResult GuardarDatos(string nombre, int edad, int dni, bool trabajando, int tipo, int ingreso, bool ConDeudas, int tipoDeuda, int monto, int plazo, bool Terminos)
     {
-        ViewBag.Usuario = nombre;
-         int MaxMonto = ingreso * 5;
-        if(edad > 18 && trabajando && ingreso >= 250000 && monto < MaxMonto )
+        Console.WriteLine(trabajando);
+        Console.WriteLine(ingreso);
+        Console.WriteLine(monto);
+        Console.WriteLine(ConDeudas);
+        Console.WriteLine(Terminos);
+
+        if(edad >= 18 && trabajando && ingreso >= 250000 && (monto * 5) <= ingreso && ConDeudas == false && Terminos )
         {
             return View("Apto");
         }

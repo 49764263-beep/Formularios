@@ -3,7 +3,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Farmulario</h1>
+    <h1 class="display-4">FormulaRio</h1>
 </div>
 <form action='@Url.Action("GuardarDatos", "Home")' method='POST' enctype="multipart/form-data"> 
     Nombre: <input type = "text" name = "Nombre" placeholder="Ingresar Nombre"/><br>
@@ -14,25 +14,27 @@
     <input type = "radio" name = "Trabajando" value="false">No <br>
     Tipo de empleo:
     <select name="tipo">
-        <option value="1"></option>
-        <option value="2">Relación de dependencia</option>
-        <option value="3">Monotributista</option>
-        <option value="4">Autónomo</option>
-        <option value="5">Desempleado</option>
+        <option value="1">Relación de dependencia</option>
+        <option value="2">Monotributista</option>
+        <option value="3">Autónomo</option>
+        <option value="4">Desempleado</option>
     </select> <br>
     Ingreso mensual: <input type = "number" name = "Ingreso" placeholder="Ingresar Monto"/> <br>
     ¿Posee deudas?
     <input type = "radio" name = "ConDeudas" value="true">Si
     <input type = "radio" name = "ConDeudas" value="false">No <br>
-    Tipo de deudas:
-    <input type="checkbox" name="Deduda" value="1">No tengo ninguna deuda
-    <input type="checkbox" name="Deduda" value="2">Tarjeta de crédito
-    <input type="checkbox" name="Deduda" value="3">Préstamo bancario
-    <input type="checkbox" name="Deduda" value="4">Préstamo Informal <br>
-    Monto solicitado: <input type = "number" name = "Monto" placeholder="Ingresar Monto"/> <br>
+     Tipo de deudas:
+    <select name="Deuda">
+        <option value="1">No poseo deudas</option>
+        <option value="2">Tarjeta de crédito</option>
+        <option value="3">Préstamo bancario</option>
+        <option value="4">Préstamo Informal </option>
+    </select><br>
+    Monto solicitado: 
+    <input type = "number" name = "monto" placeholder="Ingresar Monto"/> <br>
     Plazo de devolución:
-    <select name="tipo">
-        <option value="1"></option>
+    <select name="Plazo">
+        <option value="1">1 pago</option>
         <option value="2">6 meses</option>
         <option value="3">12 meses</option>
         <option value="4">24 meses</option>
